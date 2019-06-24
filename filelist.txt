@@ -1,0 +1,3 @@
+platform_setup.tcl
+filelist.txt
+Baseline_CV_SoCKit.v
