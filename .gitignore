@@ -12,3 +12,5 @@
 
 /db/
 /incremental_db/
+/.qsys_edit/
+/soc_system/
