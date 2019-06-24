@@ -1,3 +1,14 @@
-/db/
-*.un~
 *~
+*.un~
+*.bak
+*.done
+*dump.txt
+*.jdi
+*.pin
+*.rpt
+*.smsg
+*.sof
+*.summary
+
+/db/
+/incremental_db/
