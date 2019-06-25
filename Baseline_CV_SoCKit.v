@@ -32,7 +32,7 @@
 // ============================================================================
 
 //`define ENABLE_DDR3
-//`define ENABLE_HPS
+`define ENABLE_HPS
 //`define ENABLE_HSMC
 
 module Baseline_CV_SoCKit(
@@ -217,17 +217,36 @@ module Baseline_CV_SoCKit(
 
 
 
-
 //=======================================================
 //  Structural coding
 //=======================================================
-
+      
 soc_system u0 (
         .clk_clk       (OSC_50_B5B),       //   clk.clk
-        .reset_reset_n (RESET_n)  // reset.reset_n
+        .reset_reset_n (RESET_n),  // reset.reset_n
+        .memory_mem_a                (HPS_DDR3_A),                // memory.mem_a
+        .memory_mem_ba               (HPS_DDR3_BA),               //       .mem_ba
+        .memory_mem_ck               (HPS_DDR3_CK_p),               //       .mem_ck
+        .memory_mem_ck_n             (HPS_DDR3_CK_n),             //       .mem_ck_n
+        .memory_mem_cke              (HPS_DDR3_CKE),              //       .mem_cke
+        .memory_mem_cs_n             (HPS_DDR3_CS_n),             //       .mem_cs_n
+        .memory_mem_ras_n            (HPS_DDR3_RAS_n),            //       .mem_ras_n
+        .memory_mem_cas_n            (HPS_DDR3_CAS_n),            //       .mem_cas_n
+        .memory_mem_we_n             (HPS_DDR3_WE_n),             //       .mem_we_n
+        .memory_mem_reset_n          (HPS_DDR3_RESET_n),          //       .mem_reset_n
+        .memory_mem_dq               (HPS_DDR3_DQ),               //       .mem_dq
+        .memory_mem_dqs              (HPS_DDR3_DQS_p),              //       .mem_dqs
+        .memory_mem_dqs_n            (HPS_DDR3_DQS_n),            //       .mem_dqs_n
+        .memory_mem_odt              (HPS_DDR3_ODT),              //       .mem_odt
+        .memory_mem_dm               (HPS_DDR3_DM),               //       .mem_dm
+        .memory_oct_rzqin            (HPS_DDR3_RZQ),            //       .oct_rzqin
+        .hps_io_hps_io_sdio_inst_CMD (HPS_SD_CMD), // hps_io.hps_io_sdio_inst_CMD
+        .hps_io_hps_io_sdio_inst_D0  (HPS_SD_DATA[0]),  //       .hps_io_sdio_inst_D0
+        .hps_io_hps_io_sdio_inst_D1  (HPS_SD_DATA[1]),  //       .hps_io_sdio_inst_D1
+        .hps_io_hps_io_sdio_inst_CLK (HPS_SD_CLK), //       .hps_io_sdio_inst_CLK
+        .hps_io_hps_io_sdio_inst_D2  (HPS_SD_DATA[2]),  //       .hps_io_sdio_inst_D2
+        .hps_io_hps_io_sdio_inst_D3  (HPS_SD_DATA[3])   //       .hps_io_sdio_inst_D3
     );
-
-
 
 
 
