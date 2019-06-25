@@ -222,6 +222,11 @@ module Baseline_CV_SoCKit(
 //  Structural coding
 //=======================================================
 
+soc_system u0 (
+        .clk_clk       (OSC_50_B5B),       //   clk.clk
+        .reset_reset_n (RESET_n)  // reset.reset_n
+    );
+
 
 
 
