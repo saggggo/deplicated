@@ -10,6 +10,7 @@
 *.sld
 *.sof
 *.summary
+*summary.csv
 
 /db/
 /incremental_db/
