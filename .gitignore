@@ -1,10 +1,18 @@
 *~
 *.un~
+*.a
 *.bak
+*.cproject
 *.done
 *dump.txt
+*.elf
+*.html
 *.jdi
+*.map
+*.o
+*.objdump
 *.pin
+*.project
 *.rpt
 *.smsg
 *.sld
@@ -16,3 +24,6 @@
 /incremental_db/
 /.qsys_edit/
 /soc_system/
+/software/.metadata
+/software/niosmaster/obj/
+/software/niosmaster_bsp/obj/
