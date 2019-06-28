@@ -246,9 +246,13 @@ soc_system u0 (
 	.hps_io_hps_io_sdio_inst_CLK (HPS_SD_CLK),      //       .hps_io_sdio_inst_CLK
 	.hps_io_hps_io_sdio_inst_D2  (HPS_SD_DATA[2]),  //       .hps_io_sdio_inst_D2
 	.hps_io_hps_io_sdio_inst_D3  (HPS_SD_DATA[3]),  //       .hps_io_sdio_inst_D3
-	.pio_0_external_connection_export (LED)
+	.dipsw_pio_external_connection_export (SW), 		// dipsw_pio_external_connection.export
+	.led_pio_external_connection_export   (LED),   	//   led_pio_external_connection.export
+	.btn_pio_external_connection_export   (KEY),   	//   btn_pio_external_connection.export
+  .spi_master_external_MISO                  (TEMP_DOUT),                  //                spi_0_external.MISO
+  .spi_master_external_MOSI                  (TEMP_DIN),                  //                              .MOSI
+  .spi_master_external_SCLK                  (TEMP_SCLK),                  //                              .SCLK
+  .spi_master_external_SS_n                  (TEMP_CS_n)  
 );
-
-
 
 endmodule
